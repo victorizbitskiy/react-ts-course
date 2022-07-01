@@ -1,6 +1,6 @@
 import React from "react";
 import Card, { CardVariant } from "./components/Card";
-import { IUser } from "./components/types/types";
+import { IUser } from "./types/types";
 import UserList from "./components/UserList";
 
 const App = () => {
