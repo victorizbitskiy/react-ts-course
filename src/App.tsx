@@ -3,6 +3,8 @@ import Card, { CardVariant } from "./components/Card";
 import { IUser } from "./types/types";
 import UserList from "./components/UserList";
 import axios from "axios";
+import List from "./components/List";
+import UserItem from "./components/UserItem";
 
 const App = () => {
   const [users, setUsers] = useState<IUser[]>([]);
@@ -33,7 +35,10 @@ const App = () => {
         <button>Кнопка</button>
         <div>Текст</div>
       </Card>
-      <UserList users={users} />
+      <List 
+        items={users}
+        renderItem={(user: IUser) => <UserItem user={user} key={user.id}/> }
+      />
     </div>
   );
 };
